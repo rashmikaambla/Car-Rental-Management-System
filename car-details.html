@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Car Details — RouteLine Car Rentals</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand"><span class="brand-mark">R</span>RouteLine</a>
+    <ul class="nav-links" data-nav-links>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cars.html">Fleet</a></li>
+      <li><a href="booking.html">Book Now</a></li>
+      <li><a href="booking-history.html">My Bookings</a></li>
+      <li><a href="admin.html">Admin</a></li>
+    </ul>
+    <div class="nav-actions">
+      <span data-auth-slot></span>
+      <button class="icon-btn" data-theme-toggle title="Toggle theme">☀️</button>
+      <button class="nav-toggle" data-nav-toggle aria-label="Toggle menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="container">
+    <span class="breadcrumbs"><a href="index.html">Home</a> / <a href="cars.html">Fleet</a> / <span id="crumb-name">Car</span></span>
+  </div>
+</header>
+
+<section>
+  <div class="container details-grid" id="details-root">
+    <!-- populated by js/details.js -->
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="container">
+    <div class="section-head">
+      <h2 style="font-size:1.6rem;">You might also like</h2>
+    </div>
+    <div class="car-grid" id="related-grid"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© <span data-year></span> RouteLine Car Rentals. All rights reserved.</span>
+      <a href="cars.html">Back to fleet</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/details.js"></script>
+</body>
+</html>

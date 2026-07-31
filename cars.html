@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fleet — RouteLine Car Rentals</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand"><span class="brand-mark">R</span>RouteLine</a>
+    <ul class="nav-links" data-nav-links>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cars.html">Fleet</a></li>
+      <li><a href="booking.html">Book Now</a></li>
+      <li><a href="booking-history.html">My Bookings</a></li>
+      <li><a href="admin.html">Admin</a></li>
+    </ul>
+    <div class="nav-actions">
+      <span data-auth-slot></span>
+      <button class="icon-btn" data-theme-toggle title="Toggle theme">☀️</button>
+      <button class="nav-toggle" data-nav-toggle aria-label="Toggle menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="container">
+    <span class="breadcrumbs"><a href="index.html">Home</a> / Fleet</span>
+    <h1>The full fleet</h1>
+    <p style="max-width:560px;">Search by name, filter by category, fuel or price — the list updates instantly as you type.</p>
+  </div>
+</header>
+
+<section style="padding-top:40px;">
+  <div class="container">
+    <div class="filters-bar">
+      <div class="search-field">
+        <label for="search">Search</label>
+        <input type="text" id="search" placeholder="Search by car name or brand…" />
+      </div>
+      <div>
+        <label for="category">Category</label>
+        <select id="category">
+          <option value="">All categories</option>
+        </select>
+      </div>
+      <div>
+        <label for="fuel">Fuel type</label>
+        <select id="fuel">
+          <option value="">All fuels</option>
+        </select>
+      </div>
+      <div>
+        <label for="availability">Availability</label>
+        <select id="availability">
+          <option value="">All cars</option>
+          <option value="available">Available now</option>
+          <option value="unavailable">Currently booked</option>
+        </select>
+      </div>
+      <div>
+        <label for="sort">Sort by</label>
+        <select id="sort">
+          <option value="default">Featured</option>
+          <option value="price-asc">Price: low to high</option>
+          <option value="price-desc">Price: high to low</option>
+          <option value="rating-desc">Top rated</option>
+        </select>
+      </div>
+      <div style="min-width:200px;">
+        <label for="maxPrice">Max price: <span id="maxPriceLabel" class="mono">$150</span></label>
+        <div class="range-row">
+          <input type="range" id="maxPrice" min="20" max="150" value="150" step="1" style="width:100%;" />
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-between" style="margin-bottom:18px;">
+      <span class="mono" id="resultCount" style="color:var(--text-muted);font-size:0.85rem;"></span>
+      <button class="btn btn-outline btn-sm" id="resetFilters">Reset filters</button>
+    </div>
+
+    <div class="car-grid" id="car-grid"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© <span data-year></span> RouteLine Car Rentals. All rights reserved.</span>
+      <a href="index.html">Back to home</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/cars.js"></script>
+</body>
+</html>

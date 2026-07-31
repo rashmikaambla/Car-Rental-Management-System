@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Log in — RouteLine Car Rentals</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand"><span class="brand-mark">R</span>RouteLine</a>
+    <ul class="nav-links" data-nav-links>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cars.html">Fleet</a></li>
+      <li><a href="booking.html">Book Now</a></li>
+      <li><a href="booking-history.html">My Bookings</a></li>
+      <li><a href="admin.html">Admin</a></li>
+    </ul>
+    <div class="nav-actions">
+      <span data-auth-slot></span>
+      <button class="icon-btn" data-theme-toggle title="Toggle theme">☀️</button>
+      <button class="nav-toggle" data-nav-toggle aria-label="Toggle menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<div class="auth-wrap">
+  <div class="card auth-card">
+    <div class="auth-toggle">
+      <button type="button" class="active" data-mode="login">Log in</button>
+      <button type="button" data-mode="signup">Sign up</button>
+    </div>
+
+    <div class="form-msg" id="authMsg"></div>
+
+    <form id="loginForm">
+      <div class="field" style="margin-bottom:18px;">
+        <label for="loginEmail">Email</label>
+        <input type="email" id="loginEmail" placeholder="you@example.com" />
+        <div class="error" id="err-loginEmail"></div>
+      </div>
+      <div class="field" style="margin-bottom:22px;">
+        <label for="loginPassword">Password</label>
+        <input type="password" id="loginPassword" placeholder="••••••••" />
+        <div class="error" id="err-loginPassword"></div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Log in</button>
+    </form>
+
+    <form id="signupForm" style="display:none;">
+      <div class="field" style="margin-bottom:18px;">
+        <label for="signupName">Full name</label>
+        <input type="text" id="signupName" placeholder="Jordan Blake" />
+        <div class="error" id="err-signupName"></div>
+      </div>
+      <div class="field" style="margin-bottom:18px;">
+        <label for="signupEmail">Email</label>
+        <input type="email" id="signupEmail" placeholder="you@example.com" />
+        <div class="error" id="err-signupEmail"></div>
+      </div>
+      <div class="field" style="margin-bottom:22px;">
+        <label for="signupPassword">Password</label>
+        <input type="password" id="signupPassword" placeholder="At least 6 characters" />
+        <div class="error" id="err-signupPassword"></div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Create account</button>
+    </form>
+
+    <p style="text-align:center;margin-top:22px;font-size:0.82rem;">
+      Demo authentication only — accounts are stored in your browser's local storage.
+    </p>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© <span data-year></span> RouteLine Car Rentals. All rights reserved.</span>
+      <a href="index.html">Back to home</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

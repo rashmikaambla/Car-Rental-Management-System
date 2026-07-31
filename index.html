@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>RouteLine Car Rentals — Book a car on your route</title>
+<meta name="description" content="RouteLine is a modern car rental platform — browse the fleet, compare specs, and book a car in minutes." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand"><span class="brand-mark">R</span>RouteLine</a>
+    <ul class="nav-links" data-nav-links>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cars.html">Fleet</a></li>
+      <li><a href="booking.html">Book Now</a></li>
+      <li><a href="booking-history.html">My Bookings</a></li>
+      <li><a href="admin.html">Admin</a></li>
+    </ul>
+    <div class="nav-actions">
+      <span data-auth-slot></span>
+      <button class="icon-btn" data-theme-toggle title="Toggle theme">☀️</button>
+      <button class="nav-toggle" data-nav-toggle aria-label="Toggle menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">Est. route — book in 90 seconds</span>
+      <h1>Rent the car that <span>fits your route.</span></h1>
+      <p class="lead">From city hatchbacks to executive SUVs — compare live availability, daily rates and specs, then reserve your car without calling anyone.</p>
+      <div class="hero-cta">
+        <a href="cars.html" class="btn btn-primary">Browse the fleet</a>
+        <a href="booking.html" class="btn btn-outline">Book now</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><span class="num">120+</span><span class="label">Cars in fleet</span></div>
+        <div class="hero-stat"><span class="num">18</span><span class="label">Pickup cities</span></div>
+        <div class="hero-stat"><span class="num">4.7</span><span class="label">Avg. rating</span></div>
+      </div>
+    </div>
+    <div class="dial-wrap">
+      <svg class="dial" viewBox="0 0 420 260" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 210 A190 190 0 0 1 400 210" fill="none" stroke="var(--border, #333)" stroke-width="14" stroke-linecap="round"/>
+        <path d="M20 210 A190 190 0 0 1 400 210" fill="none" stroke="#FFB800" stroke-width="14" stroke-linecap="round"
+          stroke-dasharray="597" stroke-dashoffset="180"/>
+        <g font-family="JetBrains Mono, monospace" font-size="13" fill="#9AA0A6">
+          <text x="10" y="235">0</text>
+          <text x="100" y="70">40</text>
+          <text x="200" y="40">80</text>
+          <text x="300" y="70">120</text>
+          <text x="392" y="235">160</text>
+        </g>
+        <line class="needle" x1="210" y1="210" x2="210" y2="55" stroke="#E13A3A" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="210" cy="210" r="14" fill="#1B1D22" stroke="#FFB800" stroke-width="3"/>
+        <text x="210" y="245" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="14" fill="#FFB800">MPH · READY</text>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<div class="lane-divider" aria-hidden="true"></div>
+
+<section id="about">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Why RouteLine</span>
+        <h2>Built for people who plan their own trips.</h2>
+      </div>
+      <p style="max-width:420px;">No queues, no hidden fees. Pick a car, choose your dates, and get a confirmation instantly — the details always match what you booked.</p>
+    </div>
+    <div class="intro-grid">
+      <div class="intro-card reveal">
+        <span class="num mono">01</span>
+        <h3>Transparent pricing</h3>
+        <p>Every listing shows the exact per-day rate up front, fuel type and seating — no surprise line items at pickup.</p>
+      </div>
+      <div class="intro-card reveal">
+        <span class="num mono">02</span>
+        <h3>Live availability</h3>
+        <p>Cars are flagged available or booked in real time, so you only ever reserve a vehicle that's actually free.</p>
+      </div>
+      <div class="intro-card reveal">
+        <span class="num mono">03</span>
+        <h3>Flexible fleet</h3>
+        <p>Hatchbacks for the city, SUVs for the family trip, electric for the quiet commute — filter until it fits.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--bg-elevated);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Featured this week</span>
+        <h2>Popular picks from the fleet</h2>
+      </div>
+      <a href="cars.html" class="btn btn-outline">View full fleet →</a>
+    </div>
+    <div class="car-grid" id="featured-grid"></div>
+  </div>
+</section>
+
+<section>
+  <div class="container text-center">
+    <span class="eyebrow" style="justify-content:center;">Ready when you are</span>
+    <h2 style="font-size:clamp(1.8rem,4vw,2.6rem);">Your next trip starts with one booking form.</h2>
+    <p style="max-width:520px;margin:0 auto 26px;">Tell us your dates and preferred car — we'll confirm the reservation and hold the vehicle for you.</p>
+    <div class="hero-cta" style="justify-content:center;">
+      <a href="booking.html" class="btn btn-primary">Start a booking</a>
+      <a href="login.html" class="btn btn-outline">Create an account</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="brand"><span class="brand-mark">R</span>RouteLine</a>
+        <p style="margin-top:14px;max-width:280px;">Modern car rentals for every route — city runs, weekend escapes, and everything between.</p>
+        <div class="social-row">
+          <a href="#" class="icon-btn" aria-label="Facebook">f</a>
+          <a href="#" class="icon-btn" aria-label="Instagram">◎</a>
+          <a href="#" class="icon-btn" aria-label="Twitter">𝕏</a>
+        </div>
+      </div>
+      <div>
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cars.html">Fleet</a></li>
+          <li><a href="booking.html">Book a car</a></li>
+          <li><a href="booking-history.html">My bookings</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="index.html#about">About us</a></li>
+          <li><a href="login.html">Login / Sign up</a></li>
+          <li><a href="admin.html">Admin dashboard</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>+1 (555) 019-2231</li>
+          <li>hello@routeline.example</li>
+          <li>221 Highway Ave, Metro City</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year></span> RouteLine Car Rentals. All rights reserved.</span>
+      <span>Built for learning — a student capstone project.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script>
+  const featured = CARS.filter(c => c.tag).slice(0, 4).length ? CARS.filter(c => c.tag).slice(0, 4) : CARS.slice(0, 4);
+  const grid = document.getElementById("featured-grid");
+  grid.innerHTML = featured.map(carCardHTML).join("");
+
+  function carCardHTML(car) {
+    return `
+    <div class="car-card reveal">
+      <div class="car-media">
+        ${car.tag ? `<span class="car-tag">${car.tag}</span>` : ""}
+        <span class="car-status ${car.available ? "on" : "off"}">${car.available ? "Available" : "Booked"}</span>
+        ${carSVG(car.color, { id: "home-" + car.id })}
+      </div>
+      <div class="car-body">
+        <div class="car-title-row">
+          <div>
+            <h3>${car.name}</h3>
+            <span class="car-brand">${car.brand} · ${car.category}</span>
+          </div>
+          <div class="car-price">${formatCurrency(car.price)}<br><small>/ day</small></div>
+        </div>
+        <div class="spec-row">
+          <span>⛽ ${car.fuel}</span>
+          <span>👤 ${car.seats} seats</span>
+          <span>⚙ ${car.transmission}</span>
+        </div>
+        <div class="car-actions">
+          <a href="car-details.html?id=${car.id}" class="btn btn-outline btn-sm">Details</a>
+          <a href="booking.html?car=${car.id}" class="btn btn-primary btn-sm">Book</a>
+        </div>
+      </div>
+    </div>`;
+  }
+</script>
+</body>
+</html>

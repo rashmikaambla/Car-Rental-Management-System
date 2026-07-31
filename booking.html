@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Book a Car — RouteLine Car Rentals</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand"><span class="brand-mark">R</span>RouteLine</a>
+    <ul class="nav-links" data-nav-links>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cars.html">Fleet</a></li>
+      <li><a href="booking.html">Book Now</a></li>
+      <li><a href="booking-history.html">My Bookings</a></li>
+      <li><a href="admin.html">Admin</a></li>
+    </ul>
+    <div class="nav-actions">
+      <span data-auth-slot></span>
+      <button class="icon-btn" data-theme-toggle title="Toggle theme">☀️</button>
+      <button class="nav-toggle" data-nav-toggle aria-label="Toggle menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="container">
+    <span class="breadcrumbs"><a href="index.html">Home</a> / Book Now</span>
+    <h1>Reserve your car</h1>
+    <p style="max-width:560px;">Fill in your details and preferred dates. We'll confirm availability instantly and save the booking to your history.</p>
+  </div>
+</header>
+
+<section>
+  <div class="container" style="max-width:820px;">
+    <div class="card">
+      <div class="form-msg" id="formMsg"></div>
+      <form id="bookingForm" novalidate>
+        <div class="form-grid">
+          <div class="field full">
+            <label for="carSelect">Choose a car *</label>
+            <select id="carSelect" name="car" required></select>
+            <div class="error" id="err-car"></div>
+          </div>
+
+          <div class="field">
+            <label for="fullName">Full name *</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Jordan Blake" />
+            <div class="error" id="err-fullName"></div>
+          </div>
+
+          <div class="field">
+            <label for="email">Email address *</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" />
+            <div class="error" id="err-email"></div>
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone number *</label>
+            <input type="tel" id="phone" name="phone" placeholder="+1 555 010 2233" />
+            <div class="error" id="err-phone"></div>
+          </div>
+
+          <div class="field">
+            <label for="license">Driving license no. *</label>
+            <input type="text" id="license" name="license" placeholder="DL-2381-2029" />
+            <div class="error" id="err-license"></div>
+          </div>
+
+          <div class="field">
+            <label for="pickupDate">Pickup date *</label>
+            <input type="date" id="pickupDate" name="pickupDate" />
+            <div class="error" id="err-pickupDate"></div>
+          </div>
+
+          <div class="field">
+            <label for="returnDate">Return date *</label>
+            <input type="date" id="returnDate" name="returnDate" />
+            <div class="error" id="err-returnDate"></div>
+          </div>
+
+          <div class="field">
+            <label for="pickupLocation">Pickup location</label>
+            <select id="pickupLocation" name="pickupLocation">
+              <option>Metro City — Downtown</option>
+              <option>Metro City — Airport</option>
+              <option>Riverside Branch</option>
+              <option>Northgate Branch</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="addonDriver">Extras</label>
+            <select id="addonDriver" name="addonDriver">
+              <option value="none">No extras</option>
+              <option value="driver">Add a driver (+$20/day)</option>
+              <option value="insurance">Full insurance (+$12/day)</option>
+              <option value="both">Driver + insurance</option>
+            </select>
+          </div>
+
+          <div class="field full">
+            <label for="notes">Notes for the branch (optional)</label>
+            <textarea id="notes" name="notes" rows="3" placeholder="Anything the branch should know — flight time, child seat, etc."></textarea>
+          </div>
+        </div>
+
+        <div class="flex-between mt-40">
+          <span class="mono" style="color:var(--text-muted);font-size:0.85rem;" id="estimateLine">Estimated total: —</span>
+          <button type="submit" class="btn btn-primary">Confirm booking</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© <span data-year></span> RouteLine Car Rentals. All rights reserved.</span>
+      <a href="booking-history.html">View my bookings</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/booking.js"></script>
+</body>
+</html>

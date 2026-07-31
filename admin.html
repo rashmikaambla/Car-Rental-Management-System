@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Admin Dashboard — RouteLine Car Rentals</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand"><span class="brand-mark">R</span>RouteLine</a>
+    <ul class="nav-links" data-nav-links>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cars.html">Fleet</a></li>
+      <li><a href="booking.html">Book Now</a></li>
+      <li><a href="booking-history.html">My Bookings</a></li>
+      <li><a href="admin.html">Admin</a></li>
+    </ul>
+    <div class="nav-actions">
+      <span data-auth-slot></span>
+      <button class="icon-btn" data-theme-toggle title="Toggle theme">☀️</button>
+      <button class="nav-toggle" data-nav-toggle aria-label="Toggle menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<div class="admin-shell">
+  <aside class="admin-side">
+    <a href="#overview" class="active" data-panel-link="overview">📊 Overview</a>
+    <a href="#fleet" data-panel-link="fleet">🚗 Fleet</a>
+    <a href="#bookings" data-panel-link="bookings">📅 Bookings</a>
+    <a href="#customers" data-panel-link="customers">👥 Customers</a>
+  </aside>
+
+  <main class="admin-main">
+    <div class="flex-between" style="margin-bottom:26px;">
+      <div>
+        <span class="eyebrow">Admin console (UI demo)</span>
+        <h1 style="margin-bottom:0;">Operations overview</h1>
+      </div>
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat-card"><div class="val" id="stat-fleet">—</div><div class="lbl">Total cars</div></div>
+      <div class="stat-card"><div class="val" id="stat-available">—</div><div class="lbl">Available now</div></div>
+      <div class="stat-card"><div class="val" id="stat-bookings">—</div><div class="lbl">Total bookings</div></div>
+      <div class="stat-card"><div class="val" id="stat-revenue">—</div><div class="lbl">Est. revenue booked</div></div>
+    </div>
+
+    <section id="fleet" style="padding:0 0 40px;">
+      <div class="section-head" style="margin-bottom:18px;">
+        <h2 style="font-size:1.4rem;">Fleet status</h2>
+      </div>
+      <div class="card table-wrap">
+        <table class="data-table" id="fleetTable">
+          <thead>
+            <tr><th>Car</th><th>Category</th><th>Fuel</th><th>Price/day</th><th>Rating</th><th>Status</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="bookings" style="padding:0 0 40px;">
+      <div class="section-head" style="margin-bottom:18px;">
+        <h2 style="font-size:1.4rem;">Recent bookings (this browser)</h2>
+      </div>
+      <div class="card table-wrap" id="bookingsPanel"></div>
+    </section>
+  </main>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© <span data-year></span> RouteLine Car Rentals. All rights reserved.</span>
+      <span>Admin UI is a static demo — no real backend.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>
