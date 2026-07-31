@@ -228,27 +228,28 @@ https://rashmikaambla.github.io/Car-Rental-Management-System/
 #Screenshots
 
 #Home Page
-<img width="1844" height="879" alt="Screenshot 2026-07-31 145054" src="https://github.com/user-attachments/assets/f59cb077-a324-434a-97cf-4dc0d6a8484e" />
+
+<img width="1844" height="879" alt="Screenshot 2026-07-31 145054" src="https://github.com/user-attachments/assets/7bf8d996-7ebc-4b1c-9667-bc52f66ab446" />
 
 # Sign in/Sign up
 
-<img width="1783" height="861" alt="Screenshot 2026-07-31 145111" src="https://github.com/user-attachments/assets/d14a349f-9c9a-44d3-8ad3-d1c07dc35f6f" />
+<img width="1783" height="861" alt="Screenshot 2026-07-31 145111" src="https://github.com/user-attachments/assets/dddf44ef-9274-4cf5-ad95-72bafad61386" />
 
 #cars listing
-<img width="1776" height="894" alt="Screenshot 2026-07-31 145157" src="https://github.com/user-attachments/assets/9e3fac6b-2285-472b-adfe-60767afdff78" />
+<img width="1776" height="894" alt="Screenshot 2026-07-31 145157" src="https://github.com/user-attachments/assets/43803d06-0a64-48e8-878e-32c3be73d902" />
 
 #Booking Form
-<img width="1920" height="1080" alt="Screenshot (62)" src="https://github.com/user-attachments/assets/167a7ac5-9331-4ba0-8936-47cf2ed63ba5" />
+<img width="1920" height="1080" alt="Screenshot (62)" src="https://github.com/user-attachments/assets/e4de84ff-2352-451f-b9c7-b47284baac4c" />
 
 #Booking History
-<img width="1920" height="1080" alt="Screenshot (63)" src="https://github.com/user-attachments/assets/6ff8ce37-665d-4cd3-b338-075fa1f850d8" />
+<img width="1920" height="1080" alt="Screenshot (63)" src="https://github.com/user-attachments/assets/d3e271b4-46d9-4b61-8d09-e79c548fdcd7" />
 
 #Admin Dashboard
-<img width="1920" height="1080" alt="Screenshot (64)" src="https://github.com/user-attachments/assets/a31984d7-baa5-441a-8d2b-b59fc241c39f" />
-<img width="1920" height="1080" alt="Screenshot (64)" src="https://github.com/user-attachments/assets/7862e0e0-ea70-4720-b80b-e609b6694ad3" />
+<img width="1920" height="1080" alt="Screenshot (64)" src="https://github.com/user-attachments/assets/dc0032ac-e70e-4786-b7f1-36b40193c1e5" />
+<img width="1920" height="1080" alt="Screenshot (65)" src="https://github.com/user-attachments/assets/fd98885f-24e9-48d0-b369-d01826f9d11e" />
 
 #Light Mode
-<img width="1920" height="1080" alt="Screenshot (66)" src="https://github.com/user-attachments/assets/ab83713f-213a-4e29-aa26-af3f6707a372" />
+<img width="1920" height="1080" alt="Screenshot (66)" src="https://github.com/user-attachments/assets/f5b6c46f-e3b7-432f-80b0-e805c3bb50f8" />
 
 
 
